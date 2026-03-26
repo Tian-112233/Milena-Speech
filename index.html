@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milena 自我介绍</title>
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: "Microsoft YaHei", "SimHei", Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #content {
+      background-color: white;
+      width: 100%;
+      max-width: 950px;
+      padding: 60px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-sizing: border-box;
+      border-top: 10px solid #d32f2f;
+    }
+    h1 { text-align: center; color: #333; margin: 0 0 8px 0; font-size: 28px; }
+    .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 40px; font-style: italic; }
+    .sentence-group { margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px dashed #e0e0e0; }
+    .cn-text { font-size: 24px; line-height: 2.3; color: #2c3e50; text-align: justify; }
+    .bg-text {
+      display: block; font-size: 15px; color: #546e7a; font-style: italic;
+      margin-top: 10px; font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #eceff1; padding: 8px 12px; border-radius: 6px;
+    }
+    .action-text { font-size: 15px; color: #e65100; font-style: italic; line-height: 1.8; }
+    .action-bg {
+      display: block; font-size: 14px; color: #bf360c; font-style: italic;
+      margin-top: 6px; font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #fff3e0; padding: 7px 12px; border-radius: 6px;
+    }
+    ruby { ruby-position: over; margin: 0 2px; }
+    rt {
+      font-size: 13px; color: #d32f2f; font-weight: normal;
+      font-family: Arial, sans-serif; transform: translateY(-4px);
+    }
+    ruby, rt { ruby-position: over; }
+    rt { display: ruby-text; }
+    .play-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; background-color: #e0f2f1; color: #009688;
+      border-radius: 50%; margin-left: 8px; cursor: pointer; font-size: 14px;
+      vertical-align: middle; border: 1px solid #b2dfdb; transition: all 0.2s; user-select: none;
+    }
+    .play-icon:hover { background-color: #009688; color: white; transform: scale(1.1); }
+    .vocab-container { margin-top: 60px; background-color: #fff; border: 2px solid #eee; border-radius: 12px; overflow: hidden; }
+    .vocab-table-wrap {
+      width: 100%; overflow-x: auto; overflow-y: hidden;
+      -webkit-overflow-scrolling: touch; display: block; max-width: 100%; border-top: 1px solid #eee;
+    }
+    .vocab-table-wrap table { min-width: 720px; }
+    @media (max-width: 720px) {
+      #content { padding: 24px; }
+      .vocab-table-wrap { padding-bottom: 6px; }
+      .vocab-container::after {
+        content: "左右滑动查看表格 → / Плъзнете наляво-надясно →";
+        display: block; padding: 8px 12px; font-size: 12px; color: #607d8b;
+        background: #f6f8fa; border-top: 1px solid #eee; text-align: right;
+      }
+    }
+    .vocab-title { background-color: #d32f2f; color: white; padding: 15px; font-size: 20px; font-weight: bold; text-align: center; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th, td { border-bottom: 1px solid #eee; padding: 12px 15px; vertical-align: middle; }
+    th { background-color: #ffebee; color: #b71c1c; font-weight: bold; text-align: left; }
+    tr:nth-child(even) { background-color: #fafafa; }
+    .v-word { font-size: 18px; font-weight: bold; color: #333; display: flex; align-items: center; gap: 6px; }
+    .v-pinyin { font-size: 13px; color: #888; display: block; margin-top: 4px; font-family: Arial; }
+    .footer { margin-top: 40px; text-align: center; color: #999; font-size: 12px; border-top: 1px solid #eee; padding-top: 20px; }
+    .section-divider { text-align: center; color: #bbb; font-size: 18px; letter-spacing: 6px; margin: 10px 0 24px 0; }
+  </style>
+</head>
+<body>
+<div id="content">
+  <h1>Milena 自我介绍</h1>
+  <div class="subtitle">汉语桥小学组 · 保加利亚</div>
+
+  <!-- ① 开场鞠躬 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（走到台中央，用持麦的手轻握话筒，另一只手自然垂放，面带微笑，向评委和观众鞠一躬）</div>
+    <div class="action-bg">（Отива в центъра, държи микрофона с едната ръка, усмихва се и се кланя към журито）</div>
+  </div>
+
+
+  <!-- ① 开场白 -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="尊敬 的 评委 老师， 亲爱 的 朋友们！"
+        data-py="zūnjìng de píngwěi lǎoshī qīn'ài de péngyoumen"></span>
+      <span class="play-icon" onclick="playAudio('00')">&#128266;</span>
+    </div>
+    <div class="bg-text">Уважаеми членове на журито, скъпи приятели!</div>
+  </div>
+
+  <!-- ② 大家好
+    大家 dàjiā | 好 hǎo | 我 wǒ | 叫 jiào | 米莱娜 Mǐláinà
+    今年 jīnnián | 八 bā | 岁 suì | 了 le
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="大家 好！ 我 叫 米莱娜， 今年 八 岁 了。"
+        data-py="dàjiā hǎo wǒ jiào mǐláinà jīnnián bā suì le"></span>
+      <span class="play-icon" onclick="playAudio('01')">&#128266;</span>
+    </div>
+    <div class="bg-text">Здравейте! Казвам се Милена и съм на 8 години.</div>
+  </div>
+
+  <!-- ③ 很高兴
+    很 hěn | 高兴 gāoxìng | 能 néng | 站在 zhànzài | 这里 zhèlǐ
+    和 hé | 大家 dàjiā | 分享 fēnxiǎng | 我 wǒ | 的 de | 中国 zhōngguó | 故事 gùshi
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="很 高兴 能 站在 这里， 和 大家 分享 我 的 中国 故事。"
+        data-py="hěn gāoxìng néng zhànzài zhèlǐ hé dàjiā fēnxiǎng wǒ de zhōngguó gùshi"></span>
+      <span class="play-icon" onclick="playAudio('02')">&#128266;</span>
+    </div>
+    <div class="bg-text">Радвам се, че мога да стоя тук и да споделя с вас моята китайска история.</div>
+  </div>
+
+  <div class="section-divider">· · ·</div>
+
+  <!-- ④ 两个三年动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手伸出两根手指，微笑着比划两个"3"，表示两个三年）</div>
+    <div class="action-bg">（Показва два пръста с свободната ръка и се усмихва, за да покаже „две тригодишни периода"）</div>
+  </div>
+
+  <!-- 在 zài | 我 wǒ | 的 de | 生活 shēnghuó | 里 lǐ
+    有 yǒu | 两个 liǎnggè | 非常 fēicháng | 重要 zhòngyào | 的 de | 三年 sānnián
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="在 我 的 生活 里， 有 两个 非常 重要 的 三年。"
+        data-py="zài wǒ de shēnghuó lǐ yǒu liǎnggè fēicháng zhòngyào de sānnián"></span>
+      <span class="play-icon" onclick="playAudio('03')">&#128266;</span>
+    </div>
+    <div class="bg-text">В живота ми има два много важни „тригодишни периода".</div>
+  </div>
+
+  <!-- ⑤ 第一个三年动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手伸出食指）</div>
+    <div class="action-bg">（Вдига показалеца на свободната ръка）</div>
+  </div>
+
+  <!-- 第一 dìyī | 个 gè | 三年 sānnián | 是 shì | 我 wǒ
+    学习 xuéxí | 大提琴 dàtíqín | 的 de | 时间 shíjiān
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="第一 个 三年， 是 我 学习 大提琴 的 时间。"
+        data-py="dìyī gè sānnián shì wǒ xuéxí dàtíqín de shíjiān"></span>
+      <span class="play-icon" onclick="playAudio('04')">&#128266;</span>
+    </div>
+    <div class="bg-text">Първите три години са времето, в което учих да свиря на виолончело.</div>
+  </div>
+
+  <!-- ⑥ 拉琴动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手做拉弓的动作，陶醉地微微闭眼）</div>
+    <div class="action-bg">（Имитира дърпане на лък с свободната ръка и леко затваря очи с удоволствие）</div>
+  </div>
+
+  <!-- 琴弦 qínxián | 的 de | 跳动 tiàodòng | 让 ràng | 我 wǒ | 爱上 àishàng | 了 le | 旋律 xuánlǜ -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="琴弦 的 跳动 让 我 爱上 了 旋律。"
+        data-py="qínxián de tiàodòng ràng wǒ àishàng le xuánlǜ"></span>
+      <span class="play-icon" onclick="playAudio('05')">&#128266;</span>
+    </div>
+    <div class="bg-text">Трептенето на струните ме накара да се влюбя в мелодиите.</div>
+  </div>
+
+  <!-- ⑦ 第二个三年动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手伸出食指）</div>
+    <div class="action-bg">（Вдига показалеца на свободната ръка）</div>
+  </div>
+
+  <!-- 第二 dìèr | 个 gè | 三年 sānnián | 是 shì | 我 wǒ
+    和 hé | 中文 zhōngwén | 相遇 xiāngyù | 的 de | 时间 shíjiān
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="第二 个 三年， 是 我 和 中文 相遇 的 时间。"
+        data-py="dìèr gè sānnián shì wǒ hé zhōngwén xiāngyù de shíjiān"></span>
+      <span class="play-icon" onclick="playAudio('06')">&#128266;</span>
+    </div>
+    <div class="bg-text">Вторите три години са времето, в което се срещнах с китайския език.</div>
+  </div>
+
+  <div class="section-divider">· · ·</div>
+
+  <!-- ⑧ 画画动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手在空中做画画的动作）</div>
+    <div class="action-bg">（Имитира рисуване с пръсти на свободната ръка във въздуха）</div>
+  </div>
+
+  <!-- 妈妈 māma | 告诉 gàosu | 我 wǒ | 中文 zhōngwén | 是 shì | 世界上 shìjièshang
+    最 zuì | 美丽 měilì | 的 de | 语言 yǔyán | 之一 zhīyī
+    虽然 suīrán | 它 tā | 写起来 xiěqǐlái | 有点儿 yǒudiǎnr | 像 xiàng | 画画 huàhuà
+    说起来 shuōqǐlái | 像 xiàng | 在 zài | 唱歌 chànggē
+    但 dàn | 我 wǒ | 已经 yǐjīng | 坚持 jiānchí | 学习 xuéxí | 了 le | 整整 zhěngzhěng | 三年 sānnián
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="妈妈 告诉 我， 中文 是 世界上 最 美丽 的 语言 之一。 虽然 它 写起来 有点儿 像 画画， 说起来 像 在 唱歌， 但 我 已经 坚持 学习 了 整整 三年！"
+        data-py="māma gàosu wǒ zhōngwén shì shìjièshang zuì měilì de yǔyán zhīyī suīrán tā xiěqǐlái yǒudiǎnr xiàng huàhuà shuōqǐlái xiàng zài chànggē dàn wǒ yǐjīng jiānchí xuéxí le zhěngzhěng sānnián"></span>
+      <span class="play-icon" onclick="playAudio('07')">&#128266;</span>
+    </div>
+    <div class="bg-text">Мама ми казва, че китайският е един от най-красивите езици в света. Макар че писането прилича малко на рисуване, а говоренето — на пеене, аз вече упорито уча цели три години!</div>
+  </div>
+
+  <!-- ⑨ 调琴弦动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手做调琴弦的手势，然后指指自己的嘴，认真地点头）</div>
+    <div class="action-bg">（Имитира настройване на струни с свободната ръка, после посочва устата си и кима）</div>
+  </div>
+
+  <!-- 对 duì | 我 wǒ | 来说 láishuō | 练习 liànxí | 中文 zhōngwén | 发音 fāyīn
+    就 jiù | 像 xiàng | 练习 liànxí | 琴弦 qínxián | 的 de | 音准 yīnzhǔn
+    一样 yíyàng（"一"后接四声"样"→ yí）
+    虽然 suīrán | 很 hěn | 难 nán
+    但 dàn | 当 dāng | 我 wǒ | 说出 shuōchū
+    一句 yìjù（"一"后接四声"流"→ yì）
+    流利 liúlì | 的 de | 中文 zhōngwén | 时 shí
+    那种 nèi zhǒng（口语"那"→ nèi）| 快乐 kuàilè
+    就 jiù | 像 xiàng | 拉出 lāchū | 了 le
+    一首 yìshǒu（"一"后接三声"完"→ yì）
+    完美 wánměi | 的 de | 曲子 qǔzi
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="对 我 来说， 练习 中文 发音 就 像 练习 琴弦 的 音准 一样， 虽然 很 难， 但 当 我 说出 一 句 流利 的 中文 时， 那 种 快乐 就 像 拉出 了 一 首 完美 的 曲子！"
+        data-py="duì wǒ láishuō liànxí zhōngwén fāyīn jiù xiàng liànxí qínxián de yīnzhǔn yíyàng suīrán hěn nán dàn dāng wǒ shuōchū yì jù liúlì de zhōngwén shí nèi zhǒng kuàilè jiù xiàng lāchū le yì shǒu wánměi de qǔzi"></span>
+      <span class="play-icon" onclick="playAudio('08')">&#128266;</span>
+    </div>
+    <div class="bg-text">За мен да упражнявам произношението на китайски е като да настройвам струните на виолончело — много е трудно, но когато произнеса плавно едно изречение на китайски, радостта е като да изсвиря перфектна мелодия!</div>
+  </div>
+
+  <div class="section-divider">· · ·</div>
+
+  <!-- ⑩ 家的手势动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手向外摊开，微笑着表示一大家子）</div>
+    <div class="action-bg">（Разтваря свободната ръка настрани, усмихвайки се, за да покаже „цялото семейство"）</div>
+  </div>
+
+  <!-- 大家 dàjiā | 看 kàn | 我 wǒ | 虽然 suīrán | 没有 méiyǒu | 兄弟姐妹 xiōngdìjiěmèi
+    但 dàn | 我 wǒ | 有 yǒu | 一个 yí ge（"一"后量词轻声→ yí）| 热闹 rènào | 的 de | 家 jiā
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="大家 看， 我 虽然 没有 兄弟姐妹， 但 我 有 一 个 热闹 的 家："
+        data-py="dàjiā kàn wǒ suīrán méiyǒu xiōngdìjiěmèi dàn wǒ yǒu yí ge rènào de jiā"></span>
+      <span class="play-icon" onclick="playAudio('09')">&#128266;</span>
+    </div>
+    <div class="bg-text">Вижте — нямам братя или сестри, но имам едно шумно и весело семейство:</div>
+  </div>
+
+  <!-- ⑪ 动物动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手比出兔子耳朵，再做仓鼠摸胡须的样子，最后学鹦鹉张张嘴，逗趣地看向观众）</div>
+    <div class="action-bg">（Прави уши на заек със свободната ръка, после имитира хамстер и накрая отваря уста като папагал — забавно се оглежда към публиката）</div>
+  </div>
+
+  <!-- 可爱 kě'ài | 的 de | 兔子 tùzi | [Пучка = non-CJK, no ruby]
+    小 xiǎo | 仓鼠 cāngshǔ | 和 hé
+    两只 liǎng zhī | 爱 ài | 说话 shuōhuà | 的 de | 鹦鹉 yīngwǔ
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="可爱 的 兔子 Пучка、 小 仓鼠 和 两 只 爱 说话 的 鹦鹉！"
+        data-py="kě'ài de tùzi  xiǎo cāngshǔ hé liǎng zhī ài shuōhuà de yīngwǔ"></span>
+      <span class="play-icon" onclick="playAudio('10')">&#128266;</span>
+    </div>
+    <div class="bg-text">Сладкото зайче Пучка, малкият хамстер и два папагала, които много обичат да говорят!</div>
+  </div>
+
+  <div class="section-divider">· · ·</div>
+
+  <!-- ⑫ 听音乐动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（眼睛亮起来，侧耳倾听，身体微微随节奏晃动）</div>
+    <div class="action-bg">（Очите светват, наклонява глава настрани сякаш слуша музика, тялото се люлее леко）</div>
+  </div>
+
+  <!-- 除了 chúle | 这些 zhèxiē | 小动物 xiǎodòngwù | 我 wǒ | 还有 háiyǒu
+    一个 yí ge（"一"后轻声→ yí）| 特别 tèbié | 的 de | 爱好儿 àihào'r
+    那 nà | 就是 jiùshì | 玩儿 wánr | 中国 zhōngguó | 游戏 yóuxì | 听 tīng | 中文歌 zhōngwéngē
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="除了 这 些 小动物， 我 还有 一 个 特别 的 爱好， 那 就是 玩儿 中国 游戏， 听 中文歌！"
+        data-py="chúle zhèi xiē xiǎodòngwù wǒ háiyǒu yí ge tèbié de àihào nà jiùshì wánr zhōngguó yóuxì tīng zhōngwéngē"></span>
+      <span class="play-icon" onclick="playAudio('11')">&#128266;</span>
+    </div>
+    <div class="bg-text">Освен тези животни имам и едно специално хоби — да играя китайски игри и да слушам китайски песни!</div>
+  </div>
+
+  <!-- ⑬ 描绘仙境动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手向外展开，描绘宏伟的画面）</div>
+    <div class="action-bg">（Разтваря свободната ръка навън, сякаш описва величествена картина）</div>
+  </div>
+
+  <!-- 在 zài | 游戏里 yóuxìlǐ | 我 wǒ | 看到 kàndào | 了 le | 美丽 měilì | 的 de
+    中国 zhōngguó | 古建筑 gǔjiànzhú | 听到 tīngdào | 了 le | 好听 hǎotīng | 的 de
+    古筝 gǔzhēng | 和 hé | 长笛 chángdí
+    那些 nèi xiē（口语→ nèi xiē）
+    画面 huàmiàn | 就 jiù | 像 xiàng | 仙境 xiānjìng
+    一样 yíyàng（"一"后接四声"样"→ yí）
+    让 ràng | 我 wǒ | 觉得 juéde | 中国 zhōngguó | 是 shì
+    一个 yí ge | 既 jì | 古老 gǔlǎo | 又 yòu | 神秘 shénmì | 的 de | 国家 guójiā
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="在 游戏里， 我 看到 了 美丽 的 中国 古建筑， 听到 了 好听 的 古筝 和 长笛。 那 些 画面 就 像 仙境 一 样， 让 我 觉得 中国 是 一 个 既 古老 又 神秘 的 国家。"
+        data-py="zài yóuxìlǐ wǒ kàndào le měilì de zhōngguó gǔjiànzhù tīngdào le hǎotīng de gǔzhēng hé chángdí nèi xiē huàmiàn jiù xiàng xiānjìng yí yàng ràng wǒ juéde zhōngguó shì yí ge jì gǔlǎo yòu shénmì de guójiā"></span>
+      <span class="play-icon" onclick="playAudio('12')">&#128266;</span>
+    </div>
+    <div class="bg-text">В игрите виждам красива китайска архитектура и чувам прекрасни звуци на гуджън и флейта. Тези образи приличат на приказен свят и ме карат да мисля, че Китай е страна, която е едновременно древна и мистериозна.</div>
+  </div>
+
+  <!-- ⑭ 憧憬动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手轻放在脸旁，做出憧憬的表情，微微仰头）</div>
+    <div class="action-bg">（Слага свободната ръка до лицето с копнежно изражение, леко вдига глава）</div>
+  </div>
+
+  <!-- 我 wǒ | 常常 chángcháng | 想 xiǎng | 如果 rúguǒ
+    有 yǒu | 一天 yì tiān（"一"后接一声"天"→ yì）
+    我 wǒ | 能 néng | 去 qù | 中国 zhōngguó | 看一看 kàn yi kàn（中间"一"轻声 yi）
+    那 nèi（感叹语气口语→ nèi）| 该 gāi | 多好 duōhǎo | 啊 a
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="我 常常 想， 如果 有 一 天 我 能 去 中国 看 一 看， 那 该 多好 啊！"
+        data-py="wǒ chángcháng xiǎng rúguǒ yǒu yì tiān wǒ néng qù zhōngguó kàn yi kàn nà gāi duōhǎo a"></span>
+      <span class="play-icon" onclick="playAudio('13')">&#128266;</span>
+    </div>
+    <div class="bg-text">Често си мисля: ако един ден мога да отида в Китай и да го видя, колко хубаво би було!</div>
+  </div>
+
+  <div class="section-divider">· · ·</div>
+
+  <!-- ⑮ 崇拜奶奶动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（神情变得温柔，用空出来的手轻轻放在心口）</div>
+    <div class="action-bg">（Изражението става нежно, слага свободната ръка леко на сърцето）</div>
+  </div>
+
+  <!-- 我 wǒ | 的 de | 奶奶 nǎinai | 是 shì
+    一位 yì wèi（"一"后接四声"位"→ yì）
+    优秀 yōuxiù | 的 de | 医生 yīshēng
+    她 tā | 也是 yěshì | 我 wǒ | 最 zuì | 崇拜 chóngbài | 的 de | 人 rén
+    她 tā | 曾经 céngjīng | 去过 qùguò | 中国 zhōngguó
+    回来 huílái | 后 hòu | 总是 zǒngshì | 对 duì | 我 wǒ | 说 shuō
+    她 tā | 非常 fēicháng | 喜欢 xǐhuān | 那里 nàlǐ
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="我 的 奶奶 是 一 位 优秀 的 医生， 她 也是 我 最 崇拜 的 人。 她 曾经 去过 中国， 回来 后 总是 对 我 说， 她 非常 喜欢 那里。"
+        data-py="wǒ de nǎinai shì yì wèi yōuxiù de yīshēng tā yěshì wǒ zuì chóngbài de rén tā céngjīng qùguò zhōngguó huílái hòu zǒngshì duì wǒ shuō tā fēicháng xǐhuān nàlǐ"></span>
+      <span class="play-icon" onclick="playAudio('14')">&#128266;</span>
+    </div>
+    <div class="bg-text">Баба ми е отличен лекар и е човекът, когото най-много уважавам. Тя е ходила в Китай и след завръщането си винаги ми казва, че много харесва там.</div>
+  </div>
+
+  <div class="section-divider">· · ·</div>
+
+  <!-- ⑯ 挺胸坚定动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（挺起胸膛，眼神坚定地看向前方，持话筒的手微微抬高）</div>
+    <div class="action-bg">（Изправя гърди, гледа напред с решителен поглед, леко вдига ръката с микрофона）</div>
+  </div>
+
+  <!-- 受 shòu | 奶奶 nǎinai | 的 de | 影响 yǐngxiǎng
+    我 wǒ | 长大 zhǎngdà | 后 hòu | 也 yě | 想 xiǎng | 成为 chéngwéi
+    一名 yì míng（"一"后接二声"名"→ yì）| 医生 yīshēng
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="受 奶奶 的 影响， 我 长大 后 也 想 成为 一 名 医生。"
+        data-py="shòu nǎinai de yǐngxiǎng wǒ zhǎngdà hòu yě xiǎng chéngwéi yì míng yīshēng"></span>
+      <span class="play-icon" onclick="playAudio('15')">&#128266;</span>
+    </div>
+    <div class="bg-text">Под влиянието на баба ми, когато порасна, също искам да стана лекар.</div>
+  </div>
+
+  <!-- ⑰ 抓草药针灸动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手做抓草药、针灸的动作，认真地比划）</div>
+    <div class="action-bg">（Имитира събиране на билки и акупунктура със свободната ръка, старателно жестикулира）</div>
+  </div>
+
+  <!-- 我 wǒ | 想 xiǎng | 如果 rúguǒ | 我 wǒ | 学好 xuéhǎo | 了 le | 中文 zhōngwén
+    以后 yǐhòu | 就 jiù | 可以 kěyǐ | 去 qù | 中国 zhōngguó | 学习 xuéxí
+    神秘 shénmì | 的 de | 中医 zhōngyī
+    我 wǒ | 想 xiǎng | 用 yòng | 草药 cǎoyào | 和 hé | 针灸 zhēnjiǔ
+    去 qù | 帮助 bāngzhù | 全世界 quánshìjiè | 的 de | 人 rén
+    不管 bùguǎn | 是 shì | 我 wǒ | 的 de | 亲人 qīnrén | 朋友 péngyou
+    还是 háishì | 我 wǒ | 不 bù | 认识 rènshi | 的 de | 陌生人 mòshēngrén
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="我 想， 如果 我 学好 了 中文， 以后 就 可以 去 中国 学习 神奇 的 中医 了。 我 想 用 草药 和 针灸 去 帮助 全世界 的 人， 不管 是 我 的 亲人、 朋友， 还是 我 不 认识 的 陌生人。"
+        data-py="wǒ xiǎng rúguǒ wǒ xuéhǎo le zhōngwén yǐhòu jiù kěyǐ qù zhōngguó xuéxí shénqí de zhōngyī le wǒ xiǎng yòng cǎoyào hé zhēnjiǔ qù bāngzhù quánshìjiè de rén bùguǎn shì wǒ de qīnrén péngyou háishì wǒ bù rènshi de mòshēngrén"></span>
+      <span class="play-icon" onclick="playAudio('16')">&#128266;</span>
+    </div>
+    <div class="bg-text">Мисля, че ако науча добре китайски, по-късно ще мога да отида в Китай да уча тайнствената китайска медицина. Искам да помагам с билки и акупунктура на хора от целия свят — независимо дали са мои близки, приятели или непознати.</div>
+  </div>
+
+  <div class="section-divider">· · ·</div>
+
+  <!-- ⑱ 描绘梦想动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（声音轻柔，用空出来的手向外展开，像描绘一幅画）</div>
+    <div class="action-bg">（Гласът е нежен, разтваря свободната ръка навън, сякаш описва картина）</div>
+  </div>
+
+  <!-- 中国 zhōngguó | 对 duì | 我 wǒ | 来说 láishuō | 是 shì
+    一首 yì shǒu（"一"后接三声"优"→ yì）
+    优美 yōuměi | 的 de | 歌 gē
+    也是 yěshì | 一个 yí ge（后接轻声）| 神奇 shénqí | 的 de | 梦 mèng
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="中国 对 我 来说， 是 一 首 优美 的 歌， 也是 一 个 神奇 的 梦。"
+        data-py="zhōngguó duì wǒ láishuō shì yì shǒu yōuměi de gē yěshì yí ge shénqí de mèng"></span>
+      <span class="play-icon" onclick="playAudio('17')">&#128266;</span>
+    </div>
+    <div class="bg-text">За мен Китай е едновременно прекрасна песен и вълшебна мечта.</div>
+  </div>
+
+  <!-- ⑲ 抱琴迈步动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手做抱着琴的姿势，迈出一步，眼神充满希望）</div>
+    <div class="action-bg">（Имитира прегръщане на виолончело със свободната ръка, прави крачка напред с надежда）</div>
+  </div>
+
+  <!-- 我 wǒ | 希望 xīwàng | 以后 yǐhòu | 能 néng | 带着 dàizhe | 我 wǒ | 的 de | 琴 qín
+    带着 dàizhe | 我 wǒ | 的 de | 医术 yīshù | 去 qù | 中国 zhōngguó
+    实现 shíxiàn | 我 wǒ | 的 de | 梦想 mèngxiǎng
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="我 希望 以后 能 带着 我 的 琴， 带着 我 的 医术， 去 中国 实现 我 的 梦想！"
+        data-py="wǒ xīwàng yǐhòu néng dàizhe wǒ de qín dàizhe wǒ de yīshù qù zhōngguó shíxiàn wǒ de mèngxiǎng"></span>
+      <span class="play-icon" onclick="playAudio('18')">&#128266;</span>
+    </div>
+    <div class="bg-text">Надявам се в бъдеще да отида в Китай с моята цигулка и медицинските си умения, за да осъществя мечтата си!</div>
+  </div>
+
+  <div class="section-divider">· · ·</div>
+
+  <!-- ⑳ 停顿微笑动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（停顿一下，微笑，用持话筒的手轻轻前指，目光扫过全场）</div>
+    <div class="action-bg">（Прави кратка пауза, усмихва се и поглежда цялата зала с жест на ръката с микрофона）</div>
+  </div>
+
+  <!-- 这 zhè | 就是 jiùshì | 我 wǒ | 的 de | 梦想 mèngxiǎng
+    一个 yí ge | 关于 guānyú | 音乐 yīnyuè | 语言 yǔyán | 和 hé | 爱心 àixīn | 的 de | 梦想 mèngxiǎng
+  -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="这 就是 我 的 故事， 一 个 关于 音乐、 语言 和 梦想 的 故事。"
+        data-py="zhè jiùshì wǒ de gùshi yí ge guānyú yīnyuè yǔyán hé mèngxiǎng de gùshi"></span>
+      <span class="play-icon" onclick="playAudio('19')">&#128266;</span>
+    </div>
+    <div class="bg-text">Това е моята мечта — мечта за музика, език и любов към хората.</div>
+  </div>
+
+  <!-- ㉑ 鞠躬致谢动作 -->
+  <div class="sentence-group">
+    <div class="cn-text action-text">（用空出来的手轻压胸口，向评委和观众鞠一躬，保持微笑）</div>
+    <div class="action-bg">（Поставя свободната ръка на гърдите и се кланя към журито и публиката с усмивка）</div>
+  </div>
+
+  <!-- 谢谢 xièxie | 大家 dàjiā -->
+  <div class="sentence-group">
+    <div class="cn-text">
+      <span class="rubyline"
+        data-hz="谢谢 大家！"
+        data-py="xièxie dàjiā"></span>
+      <span class="play-icon" onclick="playAudio('20')">&#128266;</span>
+    </div>
+    <div class="bg-text">Благодаря ви!</div>
+  </div>
+
+  <!-- ─── 重点词汇 ─── -->
+  <div class="vocab-container">
+    <div class="vocab-title">重点词汇 / Ключови думи</div>
+    <div class="vocab-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th width="28%">中文</th>
+            <th width="20%">拼音</th>
+            <th width="27%">English</th>
+            <th width="25%">Български</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="v-word">大提琴 <span class="play-icon" onclick="playAudio('v01')">&#128266;</span></span></td><td><span class="v-pinyin">dàtíqín</span></td><td>cello</td><td>Виолончело</td></tr>
+          <tr><td><span class="v-word">旋律 <span class="play-icon" onclick="playAudio('v02')">&#128266;</span></span></td><td><span class="v-pinyin">xuánlǜ</span></td><td>melody</td><td>Мелодия</td></tr>
+          <tr><td><span class="v-word">发音 <span class="play-icon" onclick="playAudio('v03')">&#128266;</span></span></td><td><span class="v-pinyin">fāyīn</span></td><td>pronunciation</td><td>Произношение</td></tr>
+          <tr><td><span class="v-word">音准 <span class="play-icon" onclick="playAudio('v04')">&#128266;</span></span></td><td><span class="v-pinyin">yīnzhǔn</span></td><td>intonation / pitch</td><td>Интонация / Точност на тона</td></tr>
+          <tr><td><span class="v-word">兄弟姐妹 <span class="play-icon" onclick="playAudio('v05')">&#128266;</span></span></td><td><span class="v-pinyin">xiōngdìjiěmèi</span></td><td>siblings</td><td>Братя и сестри</td></tr>
+          <tr><td><span class="v-word">仓鼠 <span class="play-icon" onclick="playAudio('v06')">&#128266;</span></span></td><td><span class="v-pinyin">cāngshǔ</span></td><td>hamster</td><td>Хамстер</td></tr>
+          <tr><td><span class="v-word">鹦鹉 <span class="play-icon" onclick="playAudio('v07')">&#128266;</span></span></td><td><span class="v-pinyin">yīngwǔ</span></td><td>parrot</td><td>Папагал</td></tr>
+          <tr><td><span class="v-word">古建筑 <span class="play-icon" onclick="playAudio('v08')">&#128266;</span></span></td><td><span class="v-pinyin">gǔjiànzhù</span></td><td>ancient architecture</td><td>Древна архитектура</td></tr>
+          <tr><td><span class="v-word">古筝 <span class="play-icon" onclick="playAudio('v09')">&#128266;</span></span></td><td><span class="v-pinyin">gǔzhēng</span></td><td>guzheng (zither)</td><td>Гуджън (китайска цитра)</td></tr>
+          <tr><td><span class="v-word">神秘 <span class="play-icon" onclick="playAudio('v10')">&#128266;</span></span></td><td><span class="v-pinyin">shénmì</span></td><td>mysterious</td><td>Мистериозен / Тайнствен</td></tr>
+          <tr><td><span class="v-word">崇拜 <span class="play-icon" onclick="playAudio('v11')">&#128266;</span></span></td><td><span class="v-pinyin">chóngbài</span></td><td>admire / worship</td><td>Обожавам / Уважавам</td></tr>
+          <tr><td><span class="v-word">中医 <span class="play-icon" onclick="playAudio('v12')">&#128266;</span></span></td><td><span class="v-pinyin">zhōngyī</span></td><td>traditional Chinese medicine</td><td>Традиционна китайска медицина</td></tr>
+          <tr><td><span class="v-word">草药 <span class="play-icon" onclick="playAudio('v13')">&#128266;</span></span></td><td><span class="v-pinyin">cǎoyào</span></td><td>herbal medicine</td><td>Билкова медицина</td></tr>
+          <tr><td><span class="v-word">针灸 <span class="play-icon" onclick="playAudio('v14')">&#128266;</span></span></td><td><span class="v-pinyin">zhēnjiǔ</span></td><td>acupuncture</td><td>Акупунктура</td></tr>
+          <tr><td><span class="v-word">陌生人 <span class="play-icon" onclick="playAudio('v15')">&#128266;</span></span></td><td><span class="v-pinyin">mòshēngrén</span></td><td>stranger</td><td>Непознат</td></tr>
+          <tr><td><span class="v-word">实现 <span class="play-icon" onclick="playAudio('v16')">&#128266;</span></span></td><td><span class="v-pinyin">shíxiàn</span></td><td>realize / achieve</td><td>Осъществявам / Постигам</td></tr>
+          <tr><td><span class="v-word">梦想 <span class="play-icon" onclick="playAudio('v17')">&#128266;</span></span></td><td><span class="v-pinyin">mèngxiǎng</span></td><td>dream</td><td>Мечта</td></tr>
+          <tr><td><span class="v-word">爱心 <span class="play-icon" onclick="playAudio('v18')">&#128266;</span></span></td><td><span class="v-pinyin">àixīn</span></td><td>compassion / kindness</td><td>Милосърдие / Доброта</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<script>
+  function renderRubyLine(el) {
+    const hzRaw = (el.getAttribute('data-hz') || '').trim();
+    const hzTokens = hzRaw.split(/(\s+)/).filter(t => t.length > 0);
+    const pyRaw = (el.getAttribute('data-py') || '').trim();
+    const pyTokens = pyRaw ? pyRaw.split(/\s+/).filter(Boolean) : [];
+
+    let i = 0;
+    const hasCjk = s => /[\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF]/.test(s);
+    const cap1 = s => s ? s[0].toUpperCase() + s.slice(1) : s;
+    const properPinyin = new Set(['mǐláinà', 'zhōngguó']);
+
+    let html = '';
+    for (const token of hzTokens) {
+      if (/^\s+$/.test(token)) { html += token; continue; }
+      if (!hasCjk(token)) { html += token; continue; }
+      const pyLower = (pyTokens[i] || '').toLowerCase();
+      const shouldCap = (i === 0 && pyLower) || properPinyin.has(pyLower);
+      const py = shouldCap ? cap1(pyLower) : pyLower;
+      i += 1;
+      html += '<ruby>' + token + '<rt>' + py + '</rt></ruby>';
+    }
+    el.innerHTML = html;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.rubyline').forEach(renderRubyLine);
+  });
+
+  let currentAudio = null;
+  function playAudio(id) {
+    const fileName = 'audio/' + id + '.m4a?t=' + new Date().getTime();
+    if (currentAudio) { currentAudio.pause(); currentAudio.currentTime = 0; }
+    currentAudio = new Audio(fileName);
+    currentAudio.play().catch(() => {
+      alert('未找到音频文件：' + fileName.split('?')[0]);
+    });
+  }
+</script>
+</body>
+</html>
